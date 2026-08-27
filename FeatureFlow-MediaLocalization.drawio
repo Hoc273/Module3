@@ -1,0 +1,124 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Feature Flow (don gian) - Media Localization" id="0">
+    <mxGraphModel dx="1443" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s3001" parent="1" style="swimlane;html=1;fontStyle=1;fontSize=14;startSize=32;fillColor=#f5f5f5;strokeColor=#666666;horizontal=1;" value="NGƯỜI DÙNG" vertex="1">
+          <mxGeometry height="140" width="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="s3003" parent="s3001" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="Tải video lên + xác nhận quyền sử dụng (Consent)" vertex="1">
+          <mxGeometry height="50" width="260" x="40" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s3004" parent="s3001" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Chọn ngôn ngữ dịch, giọng đọc, chế độ AUTO / MANUAL" vertex="1">
+          <mxGeometry height="50" width="260" x="340" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="s3002" parent="1" style="swimlane;html=1;fontStyle=1;fontSize=14;startSize=32;fillColor=#f5f5f5;strokeColor=#666666;horizontal=1;" value="HỆ THỐNG (dịch thuật + lồng tiếng tự động)" vertex="1">
+          <mxGeometry height="760" width="1000" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s3006" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="1. Tách âm thanh khỏi video" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s3007" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="2. Nhận diện lời thoại (Speech-to-Text)" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="s3008" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="3. Dịch nội dung sang ngôn ngữ đích" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s3012" parent="s3002" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="Chế độ MANUAL?" vertex="1">
+          <mxGeometry height="70" width="190" x="360" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="s3014" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Dừng lại chờ người dùng kiểm tra &amp; xác nhận đoạn cắt" vertex="1">
+          <mxGeometry height="50" width="260" x="610" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="s3017" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="4. Lồng tiếng (Text-to-Speech) theo từng câu" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="s3020" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="5. Trộn âm thanh (giọng mới + âm gốc/nhạc nền)" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="s3022" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="6. Kiểm tra chất lượng (QA) tự động" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="s3024" parent="s3002" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="QA có lỗi nghiêm trọng?" vertex="1">
+          <mxGeometry height="70" width="190" x="400" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="s3026" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Báo lỗi cho người dùng sửa rồi chạy lại bước liên quan" vertex="1">
+          <mxGeometry height="50" width="260" x="650" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="s3029" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="7. Render video hoàn chỉnh (ghép phụ đề / lồng tiếng vào video)" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="s3031" parent="s3002" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="Chế độ MANUAL? (cần xác nhận trước khi render)" vertex="1">
+          <mxGeometry height="70" width="190" x="400" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="s3033" parent="s3002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Dừng lại chờ người dùng xem trước &amp; Xác nhận Render" vertex="1">
+          <mxGeometry height="50" width="260" x="650" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="s3037" parent="s3002" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="8. Hoàn tất: video có thể xem / tải về / xuất phụ đề" vertex="1">
+          <mxGeometry height="50" width="260" x="60" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="s3005" edge="1" parent="1" source="s3003" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3004" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3009" edge="1" parent="1" source="s3004" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3006" value="gửi yêu cầu tạo job">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3010" edge="1" parent="1" source="s3006" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3007" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3011" edge="1" parent="1" source="s3007" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3008" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3013" edge="1" parent="1" source="s3008" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3012" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3015" edge="1" parent="1" source="s3012" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3014" value="Có (MANUAL)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3016" edge="1" parent="1" source="s3014" style="html=1;fontSize=11;endArrow=block;rounded=1;dashed=1;" target="s3012" value="người dùng xác nhận">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3018" edge="1" parent="1" source="s3012" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3017" value="Không (AUTO)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3019" edge="1" parent="1" source="s3014" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3017" value="đã xác nhận">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3021" edge="1" parent="1" source="s3017" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3020" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3023" edge="1" parent="1" source="s3020" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3022" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3025" edge="1" parent="1" source="s3022" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3024" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3027" edge="1" parent="1" source="s3024" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3026" value="Có">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3028" edge="1" parent="1" source="s3026" style="html=1;fontSize=11;endArrow=block;rounded=1;dashed=1;" target="s3024" value="đã sửa &amp; thử lại">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3030" edge="1" parent="1" source="s3024" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3029" value="Không">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3032" edge="1" parent="1" source="s3022" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3031" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3034" edge="1" parent="1" source="s3031" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3033" value="Có">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3035" edge="1" parent="1" source="s3031" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3029" value="Không (AUTO)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3036" edge="1" parent="1" source="s3033" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3029" value="đã xác nhận">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s3038" edge="1" parent="1" source="s3029" style="html=1;fontSize=11;endArrow=block;rounded=1;" target="s3037" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
